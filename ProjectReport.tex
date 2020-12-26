@@ -1,0 +1,264 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[a4paper,hmargin={3cm,2.5cm},vmargin={2.5cm,2.5cm}]{geometry}
+\usepackage{amsfonts} % if you want blackboard bold symbols e.g. for real numbers
+\usepackage{graphicx} % if you want to include jpeg or pdf pictures
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\rhead{Project Title}
+\lfoot{Department of Computer Engineering}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage{lipsum}
+\usepackage{longtable}
+\renewcommand{\bibname}{References}
+\begin{document}
+%========================================================= %
+%================begin of title page====================== %
+% The frontmatter environment for everything that comes with roman numbering\
+%============================================= %
+\newenvironment{frontmatter}{}{}
+\begin{frontmatter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+%\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1cm,-1cm) $)
+    rectangle
+    ($ (current page.south east) + (-1cm,1cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.2cm,-1.2cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.2cm,1.2cm) $);
+\end{tikzpicture}
+%}
+\begin{center}
+\textup{\large  \textbf{Dr. Babasaheb Ambedkar Technological University, Lonere}\\\textbf{Bajaj Institute of Technology, Wardha}}\\Pipri, Arvi Road, Wardha - 442001.\\[0.5cm]\textbf{\large DEPARTMENT OF COMPUTER ENGINEERING}
+
+%---------------------------------Figure------------------------------
+
+\begin{center}
+\begin{figure}[h]  %h means here other options t , b, p, etc.
+\centering
+\includegraphics[width=0.3\linewidth]{./logo1}
+\end{figure}
+\end{center}
+
+%----------------------------
+\textup{\large  A REPORT\\[0.4cm]ON}\\[0.4cm]
+\begin{LARGE}
+{\textbf {"PROJECT TITLE" }}\end{LARGE}\\[1cm]
+\begin{large}\textbf {VII Semester}
+\end{large}\\[0.5cm]
+\textit{SUBMITTED BY}\\[0.3cm]
+\begin{large}
+\textbf{Mr. XYZ (PRN No.)}\\[0.1cm]
+\textbf{Mr. XYZ (PRN No.)}\\[0.1cm]
+\textbf{Miss. XYZ (PRN No.)}\\[0.1cm]
+\textbf{Miss. XYZ (PRN No.)}\\[0.5cm]
+\end{large}
+\textit{UNDER THE GUIDANCE OF}\\[0.7cm]
+\begin{large}\textbf{Prof./Dr. GUIDE NAME}\\[0.3cm]\end{large}
+\textbf{(Academic Year: 2020-2021)}
+\vfill
+\end{center}
+\end{titlepage}
+%================begin of certificate page======================
+
+\begin{titlepage}
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=4pt]
+    ($ (current page.north west) + (1cm,-1cm) $)
+    rectangle
+    ($ (current page.south east) + (-1cm,1cm) $);
+\draw[line width=1.5pt]
+    ($ (current page.north west) + (1.2cm,-1.2cm) $)
+    rectangle
+    ($ (current page.south east) + (-1.2cm,1.2cm) $);
+\end{tikzpicture}
+\begin{center}
+\textup{\large  \textbf{Dr. Babasaheb Ambedkar Technological University, Lonere}\\
+\textbf{Bajaj Institute of Technology, Wardha}}\\
+Pipri, Arvi Road, Wardha - 442001.\\[0.5cm]
+\textbf{\large DEPARTMENT OF COMPUTER ENGINEERING}
+
+%---------------------------------Figure-----------------
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\linewidth]{./logo1}
+\end{figure}
+
+%-------------------------------------------------------
+\begin{LARGE}
+\textbf{\textit {Certificate}}\end{LARGE}\\[1.2cm]
+This is to certify that project entitled\\[0.5cm]\large\textbf{ "PROJECT TITLE"}
+ 
+has been completed by \\
+Mr/Miss. Your Name ( PRN No. xxx ) \\
+Mr/Miss. Your Name ( PRN No. xxx ) \\
+Mr/Miss. Your Name ( PRN No. xxx ) \\
+Mr/Miss. Your Name ( PRN No. xxx ) \\
+\end{center} 
+of VII semester COMPUTER ENGINEERING of academic year 2020-2021 in partial fulfillment of the Four Year of Bachelor degree in "Computer Engineering" as prescribed by the Dr. Babasaheb Ambedkar Technological University, Lonere.
+\vspace{2cm}
+\begin{multicols}{3}
+\begin{center}
+\textbf{Prof. Guide Name\\Project Guide}\hspace{5cm}\\
+\end{center}
+\begin{center}
+\textbf{Dr. S. S. Badhiye\\Project Coordinator}\hspace{5cm}\\
+\end{center}
+\begin{center}
+\textbf{(Prof. P. S. Kulkarni)\\H.O.D}\\
+\end{center}
+\vspace{0.5cm}
+\end{multicols}
+\hbox {Place: BIT, Wardha\\}
+\hbox {Date: DD/MM/2020\\}
+\vfill
+\end{titlepage}
+%================end of title page======================
+%----------------------ACKNOWLEDGEMENT---------------------------
+\pagenumbering{gobble}
+
+\pagebreak
+
+\newpage
+\begin{center}
+{\Large{\bf{\textit{ACKNOWLEDGEMENT}}\\[2cm]}}
+\end{center}
+\par \textit{It gives me great pleasure and satisfaction in presenting this project on “Project Title”.} \\
+\par I would like to express my deep sense of gratitude towards….( Write in your own wording )\\
+\par \textit{I have furthermore to thank Computer Engineering Department HOD}  {\bf Prof. P. S. Kulkarni} \textit{and} {\bf Prof. Guide Name} \textit{to encourage me to go ahead and for continuous guidance. I also want to thank {\bf Prof. ABC} for all his assistance and guidance for preparing report.}\\
+\par \textit{I would like to thank all those, who have directly or indirectly helped me for the completion of the work during this project.}
+\vspace{0.8in}
+\begin{flushright}
+Mr/Miss. Your Name (PRN No) \\
+Mr/Miss. Your Name (PRN No) \\
+Mr/Miss. Your Name (PRN No) \\
+Mr/Miss. Your Name (PRN No) \\
+\hspace*{0.1in}{VII Semester,\\Computer Engineering}\\
+\end{flushright}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\newpage
+\tableofcontents
+\listoffigures
+\listoftables
+\lfoot{Bajaj Institute of Technology, Wardha}
+%%%%%%%%%%%%%%% Abstract %%%%%%%%%%
+%\newpage
+\begin{abstract}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\par Text of chapters should be typed in Times Roman, 12pt font, normal. There should be 1 blank spaces gap between the subsequent sentences. For the Project report(Phase-I), the maximum length should not exceed 35 pages, exclusive of all figures, tables, captions, notes and references. 
+\\
+\vspace{0.3cm}
+
+\textbf{Keywords-}\it{\textbf{time series, dimensionality reduction, regression, SVM.}}\\
+\end{abstract}
+%================================================ %
+% The frontmatter environment for everything that comes with roman numbering %
+\end{frontmatter}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\pagenumbering{arabic}
+%%%%%%%%% MAIN TEXT STARTS HERE %%%%%%%%%%
+\chapter{INTRODUCTION}
+\section{Introduction}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\section{Motivation}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\chapter{PROBLEM  STATEMENT}
+
+
+\section{Problem Statement}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\section{Explanation}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\begin{table}[h]
+
+\begin{center}
+ \begin{tabular}{||c|c|c|c||} 
+
+ \hline
+ Col1 & Col2 & Col2 & Col3 \\ [0.5ex] 
+ \hline\hline
+ 1 & 23 & 832 & 432 \\ 
+ \hline
+ 2 & 4 & 32 & 235 \\
+ \hline
+ 3 & 1345 & 348 & 7321 \\
+ \hline
+ 4 & 313 & 3211 & 3131 \\
+ \hline
+ 5 & 43 & 545 & 5454 \\ [1ex] 
+ \hline
+\end{tabular}\caption{Table Name}
+\end{center}
+
+
+\end{table}
+
+\chapter{LITERATURE SURVEY }
+\section{Literature Review}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+
+\section{Gaps Identified in Literature}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+
+\chapter{SOFTWARE REQUIREMENT SPECIFICATION}
+\section{Software and Hardware Requirement}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+
+\subsection{Description}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\section{Data Flow Diagram}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\linewidth]{./logo1}
+\caption{Figure Name}
+\end{figure}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+
+\section{Database Connectivity/Algorithms/Techniques used}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\chapter{IMPLEMENTATION OF PROJECT}
+\section{Modules description}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic.\\
+\section{Screen shots of Project (if available)}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\linewidth]{./logo1} %Change This Image
+\caption{Figure Name}
+\end{figure}
+\chapter{CONCLUSION AND FUTURE WORK(Phase-II)}
+\par The first line of the first paragraph under each heading should start from left-hand margins without indentation.  Text of abstract should be typed in Times New Roman, 12pt. Keywords should be written in Times New Roman, 12pt, Italic \cite{knuthwebsite}.\\
+
+%%%%%%%%% BIBLIOGRAPHY?REFERENCES STARTS HERE %%%%%%%%%%
+\begin{thebibliography}{9}
+\bibitem{latexcompanion} 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+\textit{The \LaTeX\ Companion}. 
+Addison-Wesley, Reading, Massachusetts, 1993.
+
+\bibitem{einstein} 
+Albert Einstein. 
+\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
+[\textit{On the electrodynamics of moving bodies}]. 
+Annalen der Physik, 322(10):891–921, 1905.
+
+\bibitem{knuthwebsite} 
+Knuth: Computers and Typesetting,
+\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+\end{thebibliography}
+
+\end{document} 
+
